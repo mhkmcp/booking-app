@@ -1,11 +1,21 @@
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import Layout from "./layouts/Layout"
 
 function App() {
 
   return (
-    <>
-      <h1>Book your hotel with us.</h1>
-    </>
+    <Router>
+        <Routes>
+          <Route path="/" element={
+            <Layout>Home Page</Layout>
+          }></Route>
+
+          <Route path="/search" element={
+            <Layout>Search Page</Layout>
+          }></Route>
+          
+        </Routes>
+    </Router>
   )
 }
 
