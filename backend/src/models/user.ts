@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs'
 export type UserType = {
     _id: string;
     email: string;
-    passwrod: string;
+    password: string;
     firstName: string;
     lastName: string;
 };
@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
     }
     next()
  })
- 
+
 const User = mongoose.model<UserType>("User", userSchema);
 
 export default User;
